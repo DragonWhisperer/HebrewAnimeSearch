@@ -1,17 +1,24 @@
 <!DOCTYPE html dir="rtl">
 <html lang="en">
-<title>Hebrew Anime Search</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- English font -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<head>
+  <title>Hebrew Anime Search</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<link rel="stylesheet" href="w3.css">
+  <!-- English font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
-<!-- For arrow icon  next to MORE -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <link rel="stylesheet" href="w3.css">
+
+  <!-- For arrow icon  next to MORE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+
+
+</head>
 
 <style>
   body {
@@ -24,35 +31,53 @@
 </style>
 
 <body>
-
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
         onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-      <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-      <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">בית</a>
+      <a href="#instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">הוראות שימוש</a>
+      <a href="#labels" class="w3-bar-item w3-button w3-padding-large w3-hide-small">תוויות אתרים</a>
+
       <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+        <button class="w3-padding-large w3-button" title="More"><i class="fa fa-caret-down"></i> עוד</button>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-          <a href="#" class="w3-bar-item w3-button">Extras</a>
-          <a href="#" class="w3-bar-item w3-button">Media</a>
+          <a href="#details" class="w3-bar-item w3-button" onclick="showDetails()">פרטים טכניים</a>
+
+          <a href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm"
+            class="w3-bar-item w3-button">מנוע חיפוש לפורומים</a>
+
+          <a href="https://www.anime-spin.net/%D7%A4%D7%95%D7%A8%D7%95%D7%9E%D7%99%D7%9D/%D7%A0%D7%95%D7%A9%D7%90/5994/%D7%9E%D7%A0%D7%95%D7%A2-%D7%97%D7%99%D7%A4%D7%95%D7%A9-%D7%9C%D7%A4%D7%A0%D7%A1%D7%90%D7%91-%D7%90%D7%A0%D7%92%D7%9C%D7%99-%D7%90%D7%99%D7%9B%D7%95%D7%AA%D7%99"
+            class="w3-bar-item w3-button">חיפוש פאנסאב אנגלי איכותי</a>
+
+          <a href="#my-footer" class="w3-bar-item w3-button">צרו קשר</a>
         </div>
       </div>
-      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
-          class="fa fa-search"></i></a>
+      <a id="menue-search-button" href="javascript:void(0)"
+        class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
     </div>
   </div>
 
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;">
+    <a href="#instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">הוראות שימוש</a>
+    <a href="#labels" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">תוויות אתרים</a>
+
+    <div class="w3-dropdown-hover">
+      <button class="w3-padding-large w3-button w3-bar-item" title="More"><i class="fa fa-caret-down" onclick="phoneDropdownMoreClicked()"></i> עוד</button>
+      <div id="phone-dropdown-menue-more" class="w3-dropdown-content w3-bar-block w3-card-4" >
+        <!-- onclick="phoneDropdownMoreClicked()"  document.getElementById("phone-dropdown-menue-more").style.display = "none" 
+        
+        -->
+        <a href="#details" class="w3-bar-item w3-button" onclick="showDetails()">פרטים טכניים</a>
+        <a href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm"
+          class="w3-bar-item w3-button">מנוע חיפוש לפורומים</a>
+        <a href="https://www.anime-spin.net/%D7%A4%D7%95%D7%A8%D7%95%D7%9E%D7%99%D7%9D/%D7%A0%D7%95%D7%A9%D7%90/5994/%D7%9E%D7%A0%D7%95%D7%A2-%D7%97%D7%99%D7%A4%D7%95%D7%A9-%D7%9C%D7%A4%D7%A0%D7%A1%D7%90%D7%91-%D7%90%D7%A0%D7%92%D7%9C%D7%99-%D7%90%D7%99%D7%9B%D7%95%D7%AA%D7%99"
+          class="w3-bar-item w3-button">חיפוש פאנסאב אנגלי איכותי</a>
+        <a href="#my-footer" class="w3-bar-item w3-button">צרו קשר</a>
+      </div>
+    </div>
   </div>
 
   <!-- Page content -->
@@ -60,32 +85,47 @@
 
     <!-- Automatic Slideshow Images -->
     <div class="mySlides w3-display-container w3-center">
-      <img src="Files/homePhoto.png" style="width:100%">
+      <img class="top-image" style="width:100%">
       <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
-    </div> -->
+        <h3>Los Angeles</h3>
+        <p><b>We had the best time playing at Venice Beach!</b></p>   
+      </div> -->
     </div>
+
+    <!-- <div class="mySlides w3-display-container w3-center">
+      <img src="Files/homePhoto.png" style="width:100%">
+    </div>
+
     <div class="mySlides w3-display-container w3-center">
       <img src="Files/homePhoto.png" style="width:100%">
-      <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>New York</h3>
-      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
     </div> -->
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="Files/homePhoto.png" style="width:100%">
-      <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-    </div> -->
-    </div>
 
     <!-- The Top Search Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
       <h2 class="w3-wide">חיפוש אנימות בעברית</h2>
-      <p class="w3-opacity"><i>עברית באהבה</i></p>
-      <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing
+      <p id="engine-version" class="w3-opacity"><i>גרסה 2.2</i></p>
+
+      <!-- Search Engine -->
+      <div class="search-engine">
+        <script>
+          // (function () {
+          //   var cx = '018431971812229035622:ko3j4qoz92w';
+          //   var gcse = document.createElement('script');
+          //   gcse.type = 'text/javascript';
+          //   gcse.async = true;
+          //   gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+
+          //   gcse.id = "my-search-engine";
+          //   var s = document.getElementsByTagName('script')[0];
+          //   s.parentNode.insertBefore(gcse, s);
+          // })();
+        </script>
+        <gcse:search></gcse:search>
+      </div>
+
+      <br>
+
+      <!-- <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
         exercitation ullamco laboris nisi ut aliquip
         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
@@ -93,23 +133,22 @@
         id est laborum consectetur
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p> -->
+
+      <p class="w3-justify"
+        style="direction: rtl; text-align: right; font-family: Rubik; font-weight: 500px; font-size: 98%;">בהתחלה יצרתי
+        את המנוע הזה לשימוש אישי, אבל מהר מאוד הבנתי שכל הקהילה יכולה ליהנות ממנו, ממנוע
+        חיפוש שהופך את תהליך החיפוש לקל עד לכדי גיחוך. האם רציתם אי פעם לבדוק מה הקהילה חושבת על הסדרה שאתם מתלבטים אם
+        לראות? אולי רציתם למצוא סדרה או סרט מתורגמים לעברית? עכשיו זה קל יותר מתמיד. אולי בעבר התקשתם לחפש בגוגל מכיוון
+        שחיפוש של שם הסדרה האנגלי מניב לרוב תוצאות באנגלית, אבל הבעיה הזו נפטרה כעת. המנוע תמיד יתן תוצאות בעברית ללא
+        קשר
+        לשפת השאלה.
+        <br>
+        <br>
+        כל עוד הפרויקט פעיל מאגר האתרים ממשיך להתעדכן על בסיס שבועי.
       </p>
 
-      <!-- Search Engine -->
-      <div style="text-align:right">
-        <script>
-          (function () {
-            var cx = '018431971812229035622:ko3j4qoz92w';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-          })();
-        </script>
-        <gcse:search></gcse:search>
-      </div>
+
 
       <!-- Columns of images -->
       <!-- <div class="w3-row w3-padding-32">
@@ -130,7 +169,7 @@
 
 
     <!-- Instructions Section -->
-    <div class="w3-black" id="tour" style="background-color:#f8c7b899!important; color:black !important">
+    <div class="w3-black" id="instructions" style="background-color:#f8c7b899!important; color:black !important">
       <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <h2 class="w3-wide w3-center" dir="rtl">הוראות שימוש</h2>
         <!-- <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p> -->
@@ -140,7 +179,7 @@
           <div class="instructions-top">
             <ol>
               <li><span>1.</span>
-                <p>החיפוש במנוע לא מחליף חיפוש רגיל בגוגל. תזכרו תמיד לחפש בגוגל את מה שאתם צריכים ורק לאחר מכן לחפש
+                <p>החיפוש במנוע לא מחליף חיפוש רגיל בגוגל. זכרו תמיד לחפש בגוגל את מה שאתם צריכים ורק לאחר מכן לחפש
                   במנוע.</p>
               </li>
 
@@ -153,14 +192,19 @@
 
               <li><span>3.</span>
                 <p>אל תתיאשו אם לא מצאתם את מה שחיפשתם, נסו לנסח את הדבר בדרך אחרת. בנוסף שימו לב שאתר אחד יכול לתת הרבה
-                  תוצאות ובכך "להסתיר" תוצאות מאתרים אחרים. לכן עליכם להתבונן בתוצאות לנסח מחדש את השאלה אם יש צורך.</p>
+                  תוצאות ובכך "להסתיר" תוצאות מאתרים אחרים, לכן עליכם להתבונן בתוצאות ולנסח מחדש את השאלה אם יש צורך.
+                </p>
               </li>
 
               <li><span>4.</span>
                 <p>נסו להכנס גם לתוצאות שבמבט ראשון לא נראה שהן קשורות למה שחיפשתם, אתם עשויים להיות מופתעים. אפילו אם
-                  האתר שהגעתם אליו לא נראה קשור לחיפוש אל תתיאשו מיד, אלא נסו להפעיל "חיפוש באתר" (F3) כדי להיות בטוחים.</p>
+                  האתר שהגעתם אליו לא נראה קשור לחיפוש אל תתיאשו מיד אלא נסו להפעיל "חיפוש באתר" (F3) כדי להיות בטוחים.
+                </p>
               </li>
             </ol>
+
+            <br>
+
           </div>
 
         </div>
@@ -207,6 +251,119 @@
 
       </div>
     </div>
+
+
+    <!-- Labels Section -->
+    <div class="w3-black" id="labels" style="background-color:#939cab40!important; color:black !important">
+      <div class="w3-container w3-content w3-padding-64" style="max-width:920px;">
+        <h2 class="w3-wide w3-center" dir="rtl">תוויות אתרים</h2>
+        <!-- <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p> -->
+
+        <div style="direction: rtl !important; padding-left: 65px">
+
+          <div class="labels-top">
+            <ol>
+              <li><span>פנסאב:</span>
+                <p>כל אתר שעוסק בתרגום של אנימות או של מנגות לעברית. אתרים כגון Fast-Sub, Kat, AntyLicense Subs ודומיהם.
+                </p>
+              </li>
+
+              <li><span>כתוביות:</span>
+                <p>כל אתר שמפיץ כתוביות srt של סרטים וסדרות, ביניהם גם סרטי וסדרות אנימה. אתרים כגון SubsCenter, Wizdom
+                  Subs ודומיהם. אתרים אלו לעולם לא יפיצו קבצי וידאו.</p>
+              </li>
+
+              <li><span>בלוגים:</span>
+                <p>בלוגים בנושא אנימה, מנגה ויפן. ההגדרה הזו די רחבה וכוללת את כל האתרים שמתייחסים בצורה ניכרת לנושא.
+                  אתרים כגון AnimeOK, SuikaSan, יפן מונוגטארי ואפילו IGN Israel.</p>
+              </li>
+
+
+              <li><span>פורומים:</span>
+                <p>פורומים שמוקדשים לאנימה מנגה יפן, או פורומים שזה העיסוק העיקרי שלהם. אתרים כגון איסידייר,
+                  ANiMe-iL, Anime Legacy, ודומיהם. שימו לב שלא נכללים במנוע פורומים בהם "אנימה מנגה ויפן" הם רק נושאים
+                  שקיימים בפורום בין
+                  נושאים מגוונים רבים, כגון פורום FXP. <br>אם בכל זאת תרצו לחפש גם בפורומים אלו תוכלו להשתמש <a
+                    href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm">במנוע חיפוש קטן
+                    ויעודי למטרה זו</a>.</p>
+              </li>
+
+              <li><span>ספין:</span>
+                <p>אנימה ספין הוא אתר גדול ומגוון מאוד. הוא מכיל פורום, קבוצות פאנסאב רבות ומאגר מידע גדול על אנימות.
+                  הוחלט לתת לו תווית נפרדת.</p>
+              </li>
+
+              <li><span>ארכיון:</span>
+                <p>אתרים שמוקדשים לכל מה שקשור בגיבוי והורדה של תכנים שתרגמו קבוצות הפאנסאב השונות. אתרים כגון אנימה
+                  ביט, Archive Sub ודומיהם.</p>
+              </li>
+
+              <li><span>נטפליקס:</span>
+                <p>נטפליקס נכנסו לא מזמן לארצנו הקטנה והביאו איתם תכני אנימה מתורגמים לעברית. מכיוון שלא מדובר בפאנסאב
+                  אלא בתרגום רשמי הם מקבלים תווית משלהם.</p>
+              </li>
+
+              <li><span>צפייה:</span>
+                <p>אתרים שמספקים שירותי צפייה ישירה לסרטי וסדרות אנימה, אתרים כגון sdarot TV ודומיהם. ההמלצה היא לא
+                  לגלוש
+                  באתרים אלו אבל זה נתון לשיקולכם.</p>
+              </li>
+
+            </ol>
+
+          </div>
+        </div>
+
+        <br>
+
+        <p class="labels-top w3-opacity" style="text-align: center; direction: rtl"><i>התוויות רוצות לעזור לכם, תנו
+            להן.</i></p>
+
+      </div>
+    </div>
+
+
+    <!-- Details Section -->
+    <div class="w3-black" id="details"
+      style="background-color:#3f495d40!important; color:black !important; display: none">
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px;">
+        <h2 class="w3-wide w3-center" dir="rtl">פרטים טכניים</h2>
+        <br>
+        <div style="direction: rtl">
+          <div class="details-top">
+            <ul>
+              <li>
+                <p>
+                  המנוע מסתמך על רשימה לבנה, כלומר הוא סורק רק אתרים שנמצאים במאגר שנבחר בקפידה. מאגר האתרים ממשיך
+                  לגדול ומונה היום כבר מאות אתרים בעברית.
+                </p>
+              </li>
+              <li>
+                <p>
+                  זה מצער, אך לא ניתן להוסיף למאגר האתרים קבוצות פייסבוק או אתרים של blogspot.co.il.
+                </p>
+              </li>
+              <li>
+                <p>בחלק מהמקרים תקלידו ותגלו שהמנוע מציע השלמה אוטומטית, אל תזלזלו בה. בנוסף תמצאו לפעמים בראש רשימת
+                  התוצאות תוצאה בולטת יותר מאחרות, ייתכן שזו תוצאה שנבחרה במיוחד כמומלצת עבורכם.</p>
+              </li>
+              <li>
+                <p>לאתר אחד יכולות להיות מספר תוויות שונות. האתר Anime SmartAss לדוגמה היה בלוג רגיל, אבל כשהבעלים
+                  החליט לתרגם את אוונגליון הוא הפך מיד גם לאתר פאנסאב.</p>
+              </li>
+              <li>
+                <p>המנוע סורק גם אתרים וקבוצות שמתרגמים סדרות קוריאניות ולייב אקשן יפניים לעברית, מאחר ולפעמים מדובר
+                  בעיבוד לאנימה או מנגה כלשהי.</p>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
   </div>
 
   <!-- Ticket Modal -->
@@ -265,18 +422,81 @@
 
 
   <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <footer id="my-footer" class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <!-- <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p> -->
+    <p class="w3-medium" style="line-height: 1.1;">
+      נוצר על ידי אראגון
+      <br>
+      noaragono15@gmail.com
+    </p>
   </footer>
 
 
   <style>
+    /* #my-footer li:before {
+      content: "•";
+      padding-left: 8px;
+      color: blue;
+    } */
+
+    /* Phone screen */
+    @media (max-width:600px) {
+      .top-image {
+        content: url("Files/homePhotoBig.png");
+      }
+    }
+
+    /* Regular screen */
+    @media (min-width: 600px) {
+      .top-image {
+        content: url("Files/homePhotoRegular.png");
+      }
+    }
+
+    .w3-bar .w3-bar-item,
+    .w3-bar .w3-dropdown-hover {
+      float: right !important;
+      font-family: Assistant;
+      font-size: 120%;
+      font-weight: 400;
+    }
+
+    /* Menue labels  */
+    .w3-padding-large {
+      padding: 10px !important;
+      padding-left: 13px !important;
+      padding-right: 13px !important;
+    }
+
+    /* Menue search button */
+    #menue-search-button {
+      padding: 15px !important;
+
+    }
+
+    /* 
+    .w3-bar .w3-dropdown-hover {
+      float: right !important;
+      font-family: Assistant;
+      font-size: 109%;
+      font-weight: 600;
+    } */
+
+    /* Labels rtl */
+    .w3-right {
+      float: left !important;
+    }
+
+    /* Phone labels rtl */
+    .w3-bar-block .w3-bar-item {
+      text-align: right !important;
+    }
+
     .instructions-top ol {
       color: #cac;
       list-style-type: none;
@@ -297,6 +517,124 @@
     .instructions-top span {
       position: absolute;
     }
+
+    /* Labels */
+
+    .labels-top ol {
+      color: #cca5cc;
+      list-style-type: none;
+      padding-right: 0px;
+    }
+
+    .labels-top li {
+      /* position: relative; */
+      font: bold italic 30px/1.5 Helvetica, Verdana, sans-serif;
+      margin-bottom: 18px;
+    }
+
+    .labels-top p {
+      font: 15px/1.5 Helvetica, sans-serif;
+      padding-right: 160px;
+      /* padding-left: 11px; */
+      color: #555;
+    }
+
+    .labels-top span {
+      position: absolute;
+      font-size: 90%;
+      text-align: left;
+      width: 125px;
+    }
+
+    .details-top li {
+      font: 15px/1.5 Helvetica, sans-serif;
+      padding-right: 60px;
+      color: #555;
+    }
+
+    .search-engine {
+      text-align: right;
+    }
+
+    /* Search Engine labels */
+
+    .search-engine .gsc-tabsArea span {
+      color: #406492eb;
+      /* background-color: #c0b7c075; */
+      padding-right: 5px;
+      padding-left: 5px;
+      font-size: 114%;
+      font-family: Assistant;
+      /* text-shadow: 1px 1px 1px  rgba(157, 183, 206, 0.76); */
+      font-weight: 720;
+    }
+
+    .search-engine:hover .gsc-tabsArea:hover span:hover {
+      background-color: rgba(170, 188, 204, 0.26);
+      border-radius: 35px;
+    }
+
+    /* תווית הכל */
+    .search-engine:hover .gsc-tabHeader.gsc-tabhInactive,
+    .gsc-refinementHeader.gsc-refinementhInactive {
+      font-size: 114%;
+      font-family: Assistant;
+      font-weight: 720;
+    }
+
+    /* "עם תווית פנסאב" */
+    .search-engine .gs-per-result-labels {
+      font-style: italic;
+    }
+
+    /* result head */
+    .search-engine .gs-title {
+      font-family: Rubik;
+    }
+
+
+
+    .search-engine .gsc-control-cse {
+      /* background-color: #cac; */
+      border-radius: 34px;
+    }
+
+    .search-engine .gsc-control-cse button {
+      /* background-color: #cac; */
+      border-radius: 34px;
+      margin-left: 9px;
+      cursor: pointer;
+      /* margin-top: 1.9px; */
+    }
+
+    .search-engine .gsc-input-box {
+      border-radius: 20px;
+    }
+    
+    .search-engine .gsc-control-wrapper-cse {
+      margin-top: 3px;
+    }
+
+    @media (max-width: 600px) {
+      .search-engine .gsc-input-box {
+        padding: 0px;
+      }
+
+      .search-engine .gsc-input {
+        padding-right: 7px !important;
+      }
+
+      .search-engine .gsc-search-button-v2 {
+        padding: 4px 24px;
+        margin-right: 12px !important;
+        margin-left: 5px !important;
+      }
+    }
+
+    #engine-version {
+      margin-top: 0px;
+      margin-bottom: 22px;
+    }
   </style>
 
 
@@ -304,6 +642,10 @@
     // Automatic Slideshow - change image every 4 seconds
     var myIndex = 0;
     carousel();
+    loadSearchEngine();
+
+    var lastInput = "";
+    customizeSearchEngine();
 
     function carousel() {
       var i;
@@ -314,7 +656,28 @@
       myIndex++;
       if (myIndex > x.length) { myIndex = 1 }
       x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 4000);
+      // setTimeout(carousel, 4000);
+    }
+
+    function customizeSearchEngine() {
+      // When engine loaded to the page
+      document.addEventListener('load', function (evt) {
+        if (document.getElementById("gsc-i-id1") != null) {
+
+          setSearchPlaceholder();
+          dontDeleteInputFieldWhenSearchResultsClosed();
+        }
+      }, true);
+    }
+
+    function setSearchPlaceholder() {
+      document.getElementById("gsc-i-id1").placeholder = "חיפוש מותאם אישית";
+    }
+
+    function dontDeleteInputFieldWhenSearchResultsClosed() {
+      let resultsNode = document.getElementsByClassName("gsc-results-wrapper-overlay")[0];
+      let classWatcher = new ClassWatcher(resultsNode, 'gsc-results-wrapper-visible', whenSearchResultsApears, whenSearchResultsDisappears);
+
     }
 
     // Used to toggle the menu on small screens when clicking on the menu button
@@ -327,11 +690,92 @@
       }
     }
 
+    function loadSearchEngine() {
+      var cx = '018431971812229035622:ko3j4qoz92w';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    }
+
+    function whenSearchResultsApears() {
+      lastInput = document.getElementById("gsc-i-id1").value;
+    }
+
+    function whenSearchResultsDisappears() {
+      document.getElementById("gsc-i-id1").value = lastInput;
+    }
+
+    function showDetails() {
+      document.getElementById("details").style.display = "block";
+
+    }
+
+    function phoneDropdownMoreClicked() {
+      dropdownElement = document.getElementById("phone-dropdown-menue-more");
+      if (getComputedStyle(dropdownElement).display == "block") {
+        document.getElementById("phone-dropdown-menue-more").style.display = "none";
+      }
+      else if (getComputedStyle(dropdownElement).display == "none") {
+        document.getElementById("phone-dropdown-menue-more").style.display = "block";
+      }
+    }
+
     // When the user clicks anywhere outside of the modal, close it
     var modal = document.getElementById('ticketModal');
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
+      }
+    }
+
+
+
+
+    // https://stackoverflow.com/questions/10612024/event-trigger-on-a-class-change
+    class ClassWatcher {
+
+      constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
+        this.targetNode = targetNode
+        this.classToWatch = classToWatch
+        this.classAddedCallback = classAddedCallback
+        this.classRemovedCallback = classRemovedCallback
+        this.observer = null
+        this.lastClassState = targetNode.classList.contains(this.classToWatch)
+
+        this.init()
+      }
+
+      init() {
+        this.observer = new MutationObserver(this.mutationCallback)
+        this.observe()
+      }
+
+      observe() {
+        this.observer.observe(this.targetNode, { attributes: true })
+      }
+
+      disconnect() {
+        this.observer.disconnect()
+      }
+
+      mutationCallback = mutationsList => {
+        for (let mutation of mutationsList) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            let currentClassState = mutation.target.classList.contains(this.classToWatch)
+            if (this.lastClassState !== currentClassState) {
+              this.lastClassState = currentClassState
+              if (currentClassState) {
+                this.classAddedCallback()
+              }
+              else {
+                this.classRemovedCallback()
+              }
+            }
+          }
+        }
       }
     }
   </script>
