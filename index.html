@@ -1,5 +1,5 @@
 <!DOCTYPE html dir="rtl">
-<html lang="en">
+<html lang="he">
 
 <head>
   <title>Hebrew Anime Search</title>
@@ -16,11 +16,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
-
-  <!-- TODO: delete -->
-  <link href='segoeui.ttf' rel='stylesheet'>
-
-
 </head>
 
 <style>
@@ -32,6 +27,7 @@
     display: none
   }
 </style>
+
 
 <body>
   <!-- Navbar -->
@@ -68,11 +64,10 @@
     <a href="#labels" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">תוויות אתרים</a>
 
     <div class="w3-dropdown-hover">
-      <button class="w3-padding-large w3-button w3-bar-item" title="More"><i class="fa fa-caret-down" onclick="phoneDropdownMoreClicked()"></i> עוד</button>
-      <div id="phone-dropdown-menue-more" class="w3-dropdown-content w3-bar-block w3-card-4" >
-        <!-- onclick="phoneDropdownMoreClicked()"  document.getElementById("phone-dropdown-menue-more").style.display = "none" 
+      <button class="w3-padding-large w3-button w3-bar-item" title="More"><i class="fa fa-caret-down"
+          onclick="phoneDropdownMoreClicked()"></i> עוד</button>
+      <div id="phone-dropdown-menue-more" class="w3-dropdown-content w3-bar-block w3-card-4">
         
-        -->
         <a href="#details" class="w3-bar-item w3-button" onclick="showDetails()">פרטים טכניים</a>
         <a href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm"
           class="w3-bar-item w3-button">מנוע חיפוש לפורומים</a>
@@ -89,54 +84,35 @@
     <!-- Automatic Slideshow Images -->
     <div class="mySlides w3-display-container w3-center">
       <img class="top-image" style="width:100%">
-      <!-- <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Los Angeles</h3>
-        <p><b>We had the best time playing at Venice Beach!</b></p>   
-      </div> -->
     </div>
-
-    <!-- <div class="mySlides w3-display-container w3-center">
-      <img src="Files/homePhoto.png" style="width:100%">
-    </div>
-
-    <div class="mySlides w3-display-container w3-center">
-      <img src="Files/homePhoto.png" style="width:100%">
-    </div> -->
+	
 
     <!-- The Top Search Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide">חיפוש אנימות בעברית</h2>
       <p id="engine-version" class="w3-opacity"><i>גרסה 2.2</i></p>
 
       <!-- Search Engine -->
       <div class="search-engine">
-        <script>
-          // (function () {
-          //   var cx = '018431971812229035622:ko3j4qoz92w';
-          //   var gcse = document.createElement('script');
-          //   gcse.type = 'text/javascript';
-          //   gcse.async = true;
-          //   gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
 
-          //   gcse.id = "my-search-engine";
-          //   var s = document.getElementsByTagName('script')[0];
-          //   s.parentNode.insertBefore(gcse, s);
-          // })();
+        <div style="position: relative; padding-bottom: 50px;" id="text-for-engine-didnt-load">
+          <div style="position: absolute; width: 100%;">
+            <p
+              style="direction: rtl; text-align: center; position: static; color:#e20000; background-color: #CCCCCC;border-radius: 34px; padding: 5px; font-family: Rubik;">
+              מנוע החיפוש היה אמור להטען כאן. מומלץ לגלוש מכרום.
+              <br>
+              <a href="https://wisesub.blogspot.com/p/blog-page_30.html">תוכלו לנסות את המנוע באתר הישן</a>
+              <br>
+            </p>
+          </div>
+        </div>
+
+        <script>
         </script>
         <gcse:search></gcse:search>
       </div>
 
       <br>
-
-      <!-- <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-        id est laborum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p> -->
 
       <p class="w3-justify"
         style="direction: rtl; text-align: right; font-family: Rubik; font-weight: 500px; font-size: 98%;">בהתחלה יצרתי
@@ -150,24 +126,7 @@
         <br>
         כל עוד הפרויקט פעיל מאגר האתרים ממשיך להתעדכן על בסיס שבועי.
       </p>
-
-
-
-      <!-- Columns of images -->
-      <!-- <div class="w3-row w3-padding-32">
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
-        </div>
-      </div> -->
+	  
     </div>
 
 
@@ -207,50 +166,9 @@
             </ol>
 
             <br>
-
           </div>
 
         </div>
-
-
-        <!-- <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
-      </ul>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-      
-      
-       -->
-
 
       </div>
     </div>
@@ -261,7 +179,7 @@
       <div class="w3-container w3-content w3-padding-64" style="max-width:920px;">
         <h2 class="w3-wide w3-center" dir="rtl">תוויות אתרים</h2>
         <!-- <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p> -->
-        
+
         <div class="labels-class" style="direction: rtl !important;">
 
           <div class="labels-top">
@@ -327,102 +245,51 @@
 
 
     <!-- Details Section -->
-    <div class="w3-black" id="details"
-      style="background-color:#3f495d40!important; color:black !important; display: none">
-      <div class="w3-container w3-content w3-padding-64" style="max-width:800px;">
-        <h2 class="w3-wide w3-center" dir="rtl">פרטים טכניים</h2>
-        <br>
-        <div style="direction: rtl">
-          <div class="details-top">
-            <ul>
-              <li>
-                <p>
-                  המנוע מסתמך על רשימה לבנה, כלומר הוא סורק רק אתרים שנמצאים במאגר שנבחר בקפידה. מאגר האתרים ממשיך
-                  לגדול ומונה היום כבר מאות אתרים בעברית.
-                </p>
-              </li>
-              <li>
-                <p>
-                  זה מצער, אך לא ניתן להוסיף למאגר האתרים קבוצות פייסבוק או אתרים של blogspot.co.il.
-                </p>
-              </li>
-              <li>
-                <p>בחלק מהמקרים תקלידו ותגלו שהמנוע מציע השלמה אוטומטית, אל תזלזלו בה. בנוסף תמצאו לפעמים בראש רשימת
-                  התוצאות תוצאה בולטת יותר מאחרות, ייתכן שזו תוצאה שנבחרה במיוחד כמומלצת עבורכם.</p>
-              </li>
-              <li>
-                <p>לאתר אחד יכולות להיות מספר תוויות שונות. האתר Anime SmartAss לדוגמה היה בלוג רגיל, אבל כשהבעלים
-                  החליט לתרגם את אוונגליון הוא הפך מיד גם לאתר פאנסאב.</p>
-              </li>
-              <li>
-                <p>המנוע סורק גם אתרים וקבוצות שמתרגמים סדרות קוריאניות ולייב אקשן יפניים לעברית, מאחר ולפעמים מדובר
-                  בעיבוד לאנימה או מנגה כלשהי.</p>
-              </li>
+    <div id="details">
+      <div class="w3-black" id="details-area"
+        style="background-color:#3f495d40!important; color:black !important; display: none">
+        <div class="w3-container w3-content w3-padding-64" style="max-width:800px;">
+          <h2 class="w3-wide w3-center" dir="rtl">פרטים טכניים</h2>
+          <br>
+          <div style="direction: rtl">
+            <div class="details-top">
+              <ul>
+                <li>
+                  <p>
+                    המנוע מסתמך על רשימה לבנה, כלומר הוא סורק רק אתרים שנמצאים במאגר שנבחר בקפידה. מאגר האתרים ממשיך
+                    לגדול ומונה היום כבר מאות אתרים בעברית.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    זה מצער, אך לא ניתן להוסיף למאגר האתרים קבוצות פייסבוק או אתרים של blogspot.co.il.
+                  </p>
+                </li>
+                <li>
+                  <p>בחלק מהמקרים תקלידו ותגלו שהמנוע מציע השלמה אוטומטית, אל תזלזלו בה. בנוסף תמצאו לפעמים בראש רשימת
+                    התוצאות תוצאה בולטת יותר מאחרות, ייתכן שזו תוצאה שנבחרה במיוחד כמומלצת עבורכם.</p>
+                </li>
+                <li>
+                  <p>לאתר אחד יכולות להיות מספר תוויות שונות. האתר Anime SmartAss לדוגמה היה בלוג רגיל, אבל כשהבעלים
+                    החליט לתרגם את אוונגליון הוא הפך מיד גם לאתר פאנסאב.</p>
+                </li>
+                <li>
+                  <p>המנוע סורק גם אתרים וקבוצות שמתרגמים סדרות קוריאניות ולייב אקשן יפניים לעברית, מאחר ולפעמים מדובר
+                    בעיבוד לאנימה או מנגה כלשהי.</p>
+                </li>
 
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-
 
   </div>
-
-  <!-- Ticket Modal -->
-  <!-- <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32"> 
-        <span onclick="document.getElementById('ticketModal').style.display='none'" 
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- The Contact Section -->
-  <!-- <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
-    </div>
-  </div> -->
 
   <!-- End Page Content -->
   </div>
-
-  <!-- Image of location/map -->
-  <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
-
-
 
   <!-- Footer -->
   <footer id="my-footer" class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
@@ -440,12 +307,10 @@
   </footer>
 
 
+  
+  
+  
   <style>
-    /* #my-footer li:before {
-      content: "•";
-      padding-left: 8px;
-      color: blue;
-    } */
 
     /* Phone screen */
     @media (max-width:600px) {
@@ -482,14 +347,6 @@
 
     }
 
-    /* 
-    .w3-bar .w3-dropdown-hover {
-      float: right !important;
-      font-family: Assistant;
-      font-size: 109%;
-      font-weight: 600;
-    } */
-
     /* Labels rtl */
     .w3-right {
       float: left !important;
@@ -506,7 +363,6 @@
     }
 
     .instructions-top li {
-      /* position: relative; */
       font: bold italic 30px/1.5 Helvetica, Verdana, sans-serif;
       margin-bottom: 18px;
     }
@@ -536,7 +392,6 @@
     }
 
     .labels-top li {
-      /* position: relative; */
       font: bold italic 30px/1.5 Helvetica, Verdana, sans-serif;
       margin-bottom: 18px;
     }
@@ -544,7 +399,6 @@
     .labels-top p {
       font: 15px/1.5 Helvetica, sans-serif;
       padding-right: 160px;
-      /* padding-left: 11px; */
       color: #555;
     }
 
@@ -561,6 +415,21 @@
       color: #555;
     }
 
+    .details-top ul {
+      list-style: none;
+    }
+
+    .details-top ul li::before {
+      content: "\2022";
+      color: #af54afa1;
+      font-weight: bold;
+      font-size: 20px;
+      /* display: block; */
+      float: right;
+      width: 1em;
+      margin-right: -2.3em;
+    }
+
     .search-engine {
       text-align: right;
     }
@@ -569,7 +438,6 @@
 
     .search-engine .gsc-tabsArea span {
       color: #406492eb;
-      /* background-color: #c0b7c075; */
       padding-right: 5px;
       padding-left: 5px;
       font-size: 114%;
@@ -596,27 +464,50 @@
       font-style: italic;
     }
 
+    /* single result */
+    .search-engine .gsc-webResult .gsc-result {
+      padding: 25px 0 25px 0;
+      /* border-color: #F3F3F3; */
+      border-color: rgba(255, 255, 255, 0);
+    }
+
     /* result head */
     .search-engine .gs-title {
       font-family: Rubik;
     }
-    
 
     .search-engine .gsc-control-cse {
       /* background-color: #cac; */
       border-radius: 34px;
     }
 
+
+    /* Search button */
     .search-engine .gsc-control-cse button {
       border-radius: 34px;
       margin-left: 9px;
       cursor: pointer;
+
+      -webkit-box-shadow: 0px 6px 14px -7px #276873;
+      background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+      -webkit-border-radius: 35px 35px 35px 35px;
+      border-color: rgba(0, 0, 0, 0.521);
     }
+
+    .search-engine:hover .gsc-control-cse:hover button:hover {
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+      background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+      background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);\
+    }
+
 
     @media (min-width: 600px) {
       .search-engine .gsc-control-cse button {
-        border-color: #b50000;
-        background-color: #e06666e0;
+        /* border-color: #b50000;
+        background-color: #e06666e0; */
         border-top-width: 1.3px;
       }
     }
@@ -624,16 +515,10 @@
     .search-engine .gsc-input-box {
       border-radius: 20px;
     }
-    
+
     .search-engine .gsc-control-wrapper-cse {
       margin-top: 3px;
     }
-
-    /* .search-engine .gsc-search-button-v2 {
-        padding: 4px 24px;
-        margin-right: 12px !important;
-        margin-left: 5px !important;
-      } */
 
     @media (max-width: 600px) {
       .search-engine .gsc-input-box {
@@ -669,9 +554,11 @@
     // Automatic Slideshow - change image every 4 seconds
     var myIndex = 0;
     carousel();
-    loadSearchEngine();
-
+    var didEngineLoaded = false;
     var lastInput = "";
+
+    setTextForEngineDidntLoad();
+    loadSearchEngine();
     customizeSearchEngine();
 
     function carousel() {
@@ -693,6 +580,9 @@
 
           setSearchPlaceholder();
           dontDeleteInputFieldWhenSearchResultsClosed();
+          // document.getElementById("text-for-engine-didnt-load").style.display="none";
+          didEngineLoaded = true;
+          removeTextForEngineDidntLoad();
         }
       }, true);
     }
@@ -717,6 +607,21 @@
       }
     }
 
+    function setTextForEngineDidntLoad() {
+      document.getElementById("text-for-engine-didnt-load").style.display = "none";
+
+      setTimeout(function () {
+        if (!didEngineLoaded) {
+          document.getElementById("text-for-engine-didnt-load").style.display = "block";
+        }
+      }, 2000);
+
+    }
+
+    function removeTextForEngineDidntLoad() {
+      document.getElementById("text-for-engine-didnt-load").style.display = "none";
+    }
+
     function loadSearchEngine() {
       var cx = '018431971812229035622:ko3j4qoz92w';
       var gcse = document.createElement('script');
@@ -736,7 +641,7 @@
     }
 
     function showDetails() {
-      document.getElementById("details").style.display = "block";
+      document.getElementById("details-area").style.display = "block";
 
     }
 
@@ -759,7 +664,7 @@
     }
 
 
-
+    /* Classes: */
 
     // https://stackoverflow.com/questions/10612024/event-trigger-on-a-class-change
     class ClassWatcher {
