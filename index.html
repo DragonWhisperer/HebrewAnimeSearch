@@ -261,8 +261,8 @@
       <div class="w3-container w3-content w3-padding-64" style="max-width:920px;">
         <h2 class="w3-wide w3-center" dir="rtl">תוויות אתרים</h2>
         <!-- <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p> -->
-
-        <div style="direction: rtl !important; padding-left: 65px">
+        
+        <div class="labels-class" style="direction: rtl !important;">
 
           <div class="labels-top">
             <ol>
@@ -522,6 +522,12 @@
     }
 
     /* Labels */
+
+    @media (min-width: 600px) {
+      .labels-class {
+        padding-left: 65px;
+      }
+    }
 
     .labels-top ol {
       color: #cca5cc;
