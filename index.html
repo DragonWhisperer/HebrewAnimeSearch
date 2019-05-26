@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+
+  <!-- TODO: delete -->
   <link href='segoeui.ttf' rel='stylesheet'>
 
 
@@ -592,8 +594,7 @@
     .search-engine .gs-title {
       font-family: Rubik;
     }
-
-
+    
 
     .search-engine .gsc-control-cse {
       /* background-color: #cac; */
@@ -601,12 +602,20 @@
     }
 
     .search-engine .gsc-control-cse button {
-      /* background-color: #cac; */
       border-radius: 34px;
       margin-left: 9px;
       cursor: pointer;
-      /* margin-top: 1.9px; */
+      border-color: #b50000;
+      background-color: #e06666e0;
+      border-top-width: 1.3px;
     }
+
+    /* @media (min-width: 600px) {
+      .search-engine .gsc-control-cse button {
+        padding-bottom: 7px;
+        border-style: outset;
+      }
+    } */
 
     .search-engine .gsc-input-box {
       border-radius: 20px;
@@ -615,6 +624,12 @@
     .search-engine .gsc-control-wrapper-cse {
       margin-top: 3px;
     }
+
+    /* .search-engine .gsc-search-button-v2 {
+        padding: 4px 24px;
+        margin-right: 12px !important;
+        margin-left: 5px !important;
+      } */
 
     @media (max-width: 600px) {
       .search-engine .gsc-input-box {
@@ -629,6 +644,13 @@
         padding: 4px 24px;
         margin-right: 12px !important;
         margin-left: 5px !important;
+      }
+
+      /* button icon */
+      .search-engine .gsc-search-button-v2 svg {
+        height: 14px;
+        margin-top: 1.4px;
+        margin-bottom: 1.4px;
       }
     }
 
