@@ -13,6 +13,7 @@
   <!-- English font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="w3.css">
 
   <!-- For arrow icon  next to MORE -->
@@ -89,7 +90,6 @@
       <img class="top-image" style="width:100%" src="Files/homePhotoRegular.png">
     </div>
 
-
     <!-- The Top Search Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide">חיפוש אנימה בעברית</h2>
@@ -111,6 +111,17 @@
         </div>
 
         <script>
+          // (function () {
+          //   var cx = '018431971812229035622:ko3j4qoz92w';
+          //   var gcse = document.createElement('script');
+          //   gcse.type = 'text/javascript';
+          //   gcse.async = true;
+          //   gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+
+          //   gcse.id = "my-search-engine";
+          //   var s = document.getElementsByTagName('script')[0];
+          //   s.parentNode.insertBefore(gcse, s);
+          // })();
         </script>
         <gcse:search></gcse:search>
       </div>
@@ -173,7 +184,6 @@
           </div>
 
         </div>
-
 
       </div>
     </div>
@@ -294,9 +304,9 @@
 
   </div>
 
-
   <!-- End Page Content -->
   </div>
+
 
 
   <!-- Footer -->
@@ -529,6 +539,10 @@
       margin-top: 3px;
     }
 
+    .search-engine #gsc-i-id1:focus::placeholder {
+      color: black !important;
+    }
+
     @media (max-width: 600px) {
       .search-engine .gsc-input-box {
         padding: 0px;
@@ -594,9 +608,14 @@
             dontDeleteInputFieldWhenSearchResultsClosed();
             didEngineLoaded = true;
             removeEngineDidntLoadText();
+            focusOnInputField();
           }
         }
       }, true);
+    }
+
+    function focusOnInputField() {
+      document.getElementById("gsc-i-id1").focus();
     }
 
     function setSearchPlaceholder() {
@@ -650,6 +669,7 @@
 
     function whenSearchResultsDisappears() {
       document.getElementById("gsc-i-id1").value = lastInput;
+      focusOnInputField();
     }
 
     function showDetails() {
