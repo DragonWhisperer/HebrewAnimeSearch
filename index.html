@@ -13,7 +13,6 @@
   <!-- English font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
-  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="w3.css">
 
   <!-- For arrow icon  next to MORE -->
@@ -71,7 +70,7 @@
       <button class="w3-padding-large w3-button w3-bar-item" title="More"><i class="fa fa-caret-down"
           onclick="phoneDropdownMoreClicked()"></i> עוד</button>
       <div id="phone-dropdown-menue-more" class="w3-dropdown-content w3-bar-block w3-card-4">
-        
+
         <a href="#details" class="w3-bar-item w3-button" onclick="showDetails()">פרטים טכניים</a>
         <a href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm"
           class="w3-bar-item w3-button">מנוע חיפוש לפורומים</a>
@@ -89,6 +88,7 @@
     <div class="mySlides w3-display-container w3-center">
       <img class="top-image" style="width:100%" src="Files/homePhotoRegular.png">
     </div>
+
 
     <!-- The Top Search Section -->
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
@@ -130,12 +130,12 @@
         כל עוד הפרויקט פעיל מאגר האתרים ממשיך להתעדכן על בסיס שבועי.
       </p>
 
-
     </div>
 
 
     <!-- Instructions Section -->
-    <div class="w3-black" id="instructions" style="background-color:rgba(248,198,183,0.6)!important; color:black !important">
+    <div class="w3-black" id="instructions"
+      style="background-color:rgba(248,198,183,0.6)!important; color:black !important">
       <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <h2 class="w3-wide w3-center" dir="rtl">הוראות שימוש</h2>
         <!-- <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p> -->
@@ -180,7 +180,8 @@
 
 
     <!-- Labels Section -->
-    <div class="w3-black" id="labels" style="background-color:rgba(147,155,171,0.2509)!important; color:black !important">
+    <div class="w3-black" id="labels"
+      style="background-color:rgba(147,155,171,0.2509)!important; color:black !important">
       <div class="w3-container w3-content w3-padding-64" style="max-width:920px;">
         <h2 class="w3-wide w3-center" dir="rtl">תוויות אתרים</h2>
         <!-- <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p> -->
@@ -206,7 +207,7 @@
 
 
               <li><span>פורומים:</span>
-                <p>פורומים שמוקדשים לאנימה מנגה יפן, או פורומים שזה העיסוק העיקרי שלהם. אתרים כגון איסידייר,
+                <p>פורומים שמוקדשים לאנימה מנגה ויפן, או פורומים שזה העיסוק העיקרי שלהם. אתרים כגון איסידייר,
                   ANiMe-iL, Anime Legacy, ודומיהם. שימו לב שלא נכללים במנוע פורומים בהם "אנימה מנגה ויפן" הם רק נושאים
                   שקיימים בפורום בין
                   נושאים מגוונים רבים, כגון פורום FXP. <br>אם בכל זאת תרצו לחפש גם בפורומים אלו תוכלו להשתמש <a
@@ -292,12 +293,12 @@
     </div>
 
   </div>
-  
+
 
   <!-- End Page Content -->
   </div>
 
-  
+
   <!-- Footer -->
   <footer id="my-footer" class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -315,7 +316,6 @@
 
 
   <style>
-
     @font-face {
       font-family: "Segoe UI";
       src: url("segoeui.ttf") format('truetype');
@@ -430,7 +430,7 @@
 
     .details-top ul li::before {
       content: "\2022";
-      color: rgba(174,84,174,0.631);
+      color: rgba(174, 84, 174, 0.631);
       font-weight: bold;
       font-size: 20px;
       /* display: block; */
@@ -504,12 +504,12 @@
     }
 
     .search-engine:hover .gsc-control-cse:hover button:hover {
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
-      background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
-      background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
-      background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
-      background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-      background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+      background: -moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background: -webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background: -o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+      background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+      background: -ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
     }
 
 
@@ -583,15 +583,18 @@
     }
 
     function customizeSearchEngine() {
-      // When engine loaded to the page
+      // When engine loaded to the page (evry time)
       document.addEventListener('load', function (evt) {
         if (document.getElementById("gsc-i-id1") != null) {
 
           setSearchPlaceholder();
-          dontDeleteInputFieldWhenSearchResultsClosed();
-          // document.getElementById("text-for-engine-didnt-load").style.display="none";
-          didEngineLoaded = true;
-          removeTextForEngineDidntLoad();
+
+          // If this is the first load
+          if (!didEngineLoaded) {
+            dontDeleteInputFieldWhenSearchResultsClosed();
+            didEngineLoaded = true;
+            removeEngineDidntLoadText();
+          }
         }
       }, true);
     }
@@ -602,7 +605,7 @@
 
     function dontDeleteInputFieldWhenSearchResultsClosed() {
       let resultsNode = document.getElementsByClassName("gsc-results-wrapper-overlay")[0];
-      let classWatcher = new ClassWatcher(resultsNode, 'gsc-results-wrapper-visible', whenSearchResultsApears, whenSearchResultsDisappears);
+      let inputFieldClassWatcher = new ClassWatcher(resultsNode, 'gsc-results-wrapper-visible', whenSearchResultsApears, whenSearchResultsDisappears);
 
     }
 
@@ -627,7 +630,7 @@
 
     }
 
-    function removeTextForEngineDidntLoad() {
+    function removeEngineDidntLoadText() {
       document.getElementById("text-for-engine-didnt-load").style.display = "none";
     }
 
@@ -679,19 +682,19 @@
     class ClassWatcher {
 
       constructor(targetNode, classToWatch, classAddedCallback, classRemovedCallback) {
-        this.targetNode = targetNode
-        this.classToWatch = classToWatch
-        this.classAddedCallback = classAddedCallback
-        this.classRemovedCallback = classRemovedCallback
-        this.observer = null
-        this.lastClassState = targetNode.classList.contains(this.classToWatch)
+        this.targetNode = targetNode;
+        this.classToWatch = classToWatch;
+        this.classAddedCallback = classAddedCallback;
+        this.classRemovedCallback = classRemovedCallback;
+        this.observer = null;
+        this.lastClassState = targetNode.classList.contains(this.classToWatch);
 
-        this.init()
+        this.init();
       }
 
       init() {
-        this.observer = new MutationObserver(this.mutationCallback)
-        this.observe()
+        this.observer = new MutationObserver(mutationsList => { this.mutationCallback(this, mutationsList); });
+        this.observe();
       }
 
       observe() {
@@ -702,23 +705,25 @@
         this.observer.disconnect()
       }
 
-      mutationCallback(mutationsList) {
+      // mutationCallback = mutationsList => {
+      mutationCallback(myThis, mutationsList) {
         for (let mutation of mutationsList) {
           if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-            let currentClassState = mutation.target.classList.contains(this.classToWatch)
-            if (this.lastClassState !== currentClassState) {
-              this.lastClassState = currentClassState
+            let currentClassState = mutation.target.classList.contains(myThis.classToWatch)
+            if (myThis.lastClassState !== currentClassState) {
+              myThis.lastClassState = currentClassState
               if (currentClassState) {
-                this.classAddedCallback()
+                myThis.classAddedCallback()
               }
               else {
-                this.classRemovedCallback()
+                myThis.classRemovedCallback()
               }
             }
           }
         }
       }
     }
+
   </script>
 
 </body>
