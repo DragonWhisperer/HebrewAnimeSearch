@@ -25,6 +25,8 @@
   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
   <link rel="stylesheet" href="w3.css">
 
+  <script src="jquery-3.4.1.min.js"></script>
+
   <!-- For arrow icon  next to MORE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -63,7 +65,7 @@
           <a href="https://www.anime-spin.net/%D7%A4%D7%95%D7%A8%D7%95%D7%9E%D7%99%D7%9D/%D7%A0%D7%95%D7%A9%D7%90/5994/%D7%9E%D7%A0%D7%95%D7%A2-%D7%97%D7%99%D7%A4%D7%95%D7%A9-%D7%9C%D7%A4%D7%A0%D7%A1%D7%90%D7%91-%D7%90%D7%A0%D7%92%D7%9C%D7%99-%D7%90%D7%99%D7%9B%D7%95%D7%AA%D7%99"
             class="w3-bar-item w3-button">חיפוש פאנסאב אנגלי איכותי</a>
 
-          <a href="#my-footer" class="w3-bar-item w3-button">צרו קשר</a>
+          <a href="#contact" class="w3-bar-item w3-button" onclick="markContactArea()">צרו קשר</a>
         </div>
       </div>
       <a id="menue-search-button" href="javascript:void(0)"
@@ -86,7 +88,7 @@
           class="w3-bar-item w3-button">מנוע חיפוש לפורומים</a>
         <a href="https://www.anime-spin.net/%D7%A4%D7%95%D7%A8%D7%95%D7%9E%D7%99%D7%9D/%D7%A0%D7%95%D7%A9%D7%90/5994/%D7%9E%D7%A0%D7%95%D7%A2-%D7%97%D7%99%D7%A4%D7%95%D7%A9-%D7%9C%D7%A4%D7%A0%D7%A1%D7%90%D7%91-%D7%90%D7%A0%D7%92%D7%9C%D7%99-%D7%90%D7%99%D7%9B%D7%95%D7%AA%D7%99"
           class="w3-bar-item w3-button">חיפוש פאנסאב אנגלי איכותי</a>
-        <a href="#my-footer" class="w3-bar-item w3-button">צרו קשר</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="markContactArea()">צרו קשר</a>
       </div>
     </div>
   </div>
@@ -339,8 +341,11 @@
 
 
   <!-- Footer -->
-  <footer id="my-footer" class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <footer id="contact" class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge" style="overflow: hidden;">
+   
+    <a href="https://www.facebook.com/profile.php?id=100012357488080&sk=about&section=bio&lst=100012244067413%3A100012357488080%3A1559746624">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>    
+    </a>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
@@ -351,10 +356,112 @@
       <br>
       noaragono15@gmail.com
     </p>
+
+    <!-- Drop Animation -->
+    <div style="height: 0; width: 100%; position: relative; z-index: -1;">
+        <div id="contact-drop-animation" style="top: -91px;" class=""></div> <!-- class="drop-effect" -->
+      </div>
   </footer>
 
 
   <style>
+    /* Animations: */
+    .drop-effect {
+        position: absolute;
+        /* display: inline-block; */
+        /* float: left; */
+        /* overflow: auto; */
+        width: 200px;
+        height: 200px;
+        z-index: -1;
+
+      /* -- -- -- -- -- -- -- -- */
+
+        /* width: 400px;
+        height: 400px; */
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        border: 3px solid rgba(255, 255, 255, .1);
+
+        /* animation:      name duration timing-function delay iteration-count direction fill-mode play-state; */
+        /* default:        none 0        ease            0     1               normal    none      running */
+
+        /* -webkit-animation: pulsejg1 4s linear infinite;
+        -moz-animation: pulsejg1 4s linear infinite;
+        animation: pulsejg1 4s linear infinite; */
+        -webkit-animation: pulsejg1 3s linear 0s 1;
+        -moz-animation:    pulsejg1 3s linear 0s 1;
+        animation:         pulsejg1 3s linear 0s 1;
+
+        -webkit-border-radius: 999px;
+        -moz-border-radius: 999px;
+        border-radius: 999px;
+        -webkit-box-shadow: inset .0px 0px 15px 10px rgba(0, 0, 0, .6);
+        -moz-box-shadow: inset 0px 0px 15px 10px rgba(0, 0, 0, .6);
+        box-shadow: inset 0px 0px 15px 10px rgba(0, 0, 0, .6);
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    @-webkit-keyframes pulsejg1 {
+      0% {
+        -webkit-transform: scale(.6);
+        opacity: 0;
+        }
+
+      50% {
+        -webkit-transform: scale(.7);
+        opacity: 0;
+      }
+
+      60% {
+        -webkit-transform: scale(.9);
+        opacity: .2;
+      }
+
+      70% {
+        -webkit-transform: scale(1.1);
+        /* -webkit-transform: scale(10.1); */
+        opacity: .35;
+      }
+
+      80% {
+        -webkit-transform: scale(1.25);
+        /* -webkit-transform: scale(20.25); */
+        opacity: .2;
+      }
+
+      100% {
+        -webkit-transform: scale(1.45);
+        /* -webkit-transform: scale(30.4); */
+        opacity: 0;
+      }
+    }
+
+    #contact>a>i {
+      /* -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s; */
+      /* transition: width 2s, height 2s, background-color 2s, transform 2s; */
+      -webkit-transition: color 1.2s, -webkit-transform 1.2s;
+      transition: color 1.2s, transform 1.2s;
+    }
+
+    #contact>a>i:hover {
+      color: #1556ad;
+      /* width: 200px;
+      height: 200px; */
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      opacity: 1 !important;
+    }
+
+    /* --------- */
+
     @font-face {
       font-family: "Segoe UI";
       src: url("segoeui.ttf") format('truetype');
@@ -650,6 +757,11 @@
       }
     }
 
+    #contact  a {
+      /* Remove underline from the icons */
+      text-decoration: none;
+    }
+
     #engine-version {
       margin-top: 0px;
       margin-bottom: 22px;
@@ -775,13 +887,39 @@
       }
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    var modal = document.getElementById('ticketModal');
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    function markContactArea() {
+      // $('#contact-drop-animation').removeClass('drop-effect').addClass('drop-effect');
+      // $('#contact-drop-animation').addClass('drop-effect');
+      // $('#contact-drop-animation').toggleClass('drop-effect');
+
+      // document.getElementById('contact-drop-animation').className += ' drop-effect';
+      // new ClassWatcher($('#contact-drop-animation'), 'drop-effect', function() {}, function() {
+      //   $('#contact-drop-animation').toggleClass('drop-effect');
+      // });
+      
+      document.getElementById("contact").scrollIntoView();
+
+      if (!$('#contact-drop-animation').hasClass('drop-effect')) {
+        $('#contact-drop-animation').toggleClass('drop-effect');
+      }
+      // If not the first time, first remove the previous class
+      else {
+        $('#contact-drop-animation').toggleClass('drop-effect');
+        console.log("true - has class");
+
+        setTimeout(function() {
+          $('#contact-drop-animation').toggleClass('drop-effect');
+        }, 500);
       }
     }
+
+    // // When the user clicks anywhere outside of the modal, close it
+    // var modal = document.getElementById('ticketModal');
+    // window.onclick = function (event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
 
 
     /* Classes: */
