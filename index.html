@@ -49,7 +49,7 @@
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
-        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        onclick="toggleNavigationMenu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="#" class="w3-bar-item w3-button w3-padding-large">בית</a>
       <a href="#instructions" class="w3-bar-item w3-button w3-padding-large w3-hide-small">הוראות שימוש</a>
       <a href="#labels" class="w3-bar-item w3-button w3-padding-large w3-hide-small">תוויות אתרים</a>
@@ -75,20 +75,22 @@
 
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;">
-    <a href="#instructions" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">הוראות שימוש</a>
-    <a href="#labels" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">תוויות אתרים</a>
+    <a href="#instructions" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNavigationMenu()">הוראות שימוש</a>
+    <a href="#labels" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNavigationMenu()">תוויות אתרים</a>
 
     <div class="w3-dropdown-hover">
-      <button class="w3-padding-large w3-button w3-bar-item" title="More"><i class="fa fa-caret-down"
-          onclick="phoneDropdownMoreClicked()"></i> עוד</button>
+      <button class="w3-padding-large w3-button w3-bar-item" title="More" onclick="phoneDropdownMoreClicked()">
+        <i class="fa fa-caret-down"></i>
+         עוד
+      </button>
       <div id="phone-dropdown-menue-more" class="w3-dropdown-content w3-bar-block w3-card-4">
 
-        <a href="#details" class="w3-bar-item w3-button" onclick="showDetails()">פרטים טכניים</a>
+        <a href="#details" class="w3-bar-item w3-button" onclick="toggleNavigationMenu(); showDetails()">פרטים טכניים</a>
         <a href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm"
           class="w3-bar-item w3-button">מנוע חיפוש לפורומים</a>
         <a href="https://www.anime-spin.net/%D7%A4%D7%95%D7%A8%D7%95%D7%9E%D7%99%D7%9D/%D7%A0%D7%95%D7%A9%D7%90/5994/%D7%9E%D7%A0%D7%95%D7%A2-%D7%97%D7%99%D7%A4%D7%95%D7%A9-%D7%9C%D7%A4%D7%A0%D7%A1%D7%90%D7%91-%D7%90%D7%A0%D7%92%D7%9C%D7%99-%D7%90%D7%99%D7%9B%D7%95%D7%AA%D7%99"
           class="w3-bar-item w3-button">חיפוש פאנסאב אנגלי איכותי</a>
-        <a href="#contact" class="w3-bar-item w3-button" onclick="markContactArea()">צרו קשר</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleNavigationMenu(); markContactArea()">צרו קשר</a>
       </div>
     </div>
   </div>
@@ -212,7 +214,7 @@
               <li><span>5.</span>
                 <p class="instructions-top-p">מצאתם בעיה? לא קיבלתם תוצאת חיפוש שלדעתכם הייתם צריכים לקבל? בבקשה צרו
                   קשר. כדי להיות בטוחים שאתר
-                  כלשהו נמצא במאגר האתרים, חפשו במנוע את דומיין האתר.
+                  כלשהו נמצא במאגר האתרים פשוט חפשו אותו במנוע.
                 </p>
               </li>
             </ol>
@@ -254,19 +256,13 @@
 
               <li><span>פורומים:</span>
                 <p>פורומים שמוקדשים לאנימה מנגה ויפן, או פורומים שזה העיסוק העיקרי שלהם. אתרים כגון איסידייר,
-                  ANiMe-iL, Anime Legacy ודומיהם.
-                  <br><br style="font-size:7px;">
-                  שימו לב שלא נכללים במנוע פורומים בהם "אנימה מנגה ויפן" הם רק נושאים
-                  שקיימים בפורום בין
-                  נושאים מגוונים רבים, כגון פורום FXP. <br>אם בכל זאת תרצו לחפש גם בפורומים אלו תוכלו להשתמש <a
-                    href="https://cse.google.co.il/cse/publicurl?cx=018431971812229035622:3wz9hmis4sm">במנוע חיפוש קטן
-                    ויעודי למטרה זו</a>.</p>
+                  ANiMe-iL, Anime Legacy ודומיהם. גם פורום FXP נכנס בזכות קהילת האנימה הגדולה שלו.
               </li>
 
-              <li><span>ספין:</span>
+              <!-- <li><span>ספין:</span>
                 <p>אנימה ספין הוא אתר גדול ומגוון מאוד. הוא מכיל פורום, קבוצות פאנסאב רבות ומאגר מידע גדול על אנימות.
                   הוחלט לתת לו תווית נפרדת.</p>
-              </li>
+              </li> -->
 
               <li><span>ארכיון:</span>
                 <p>אתרים שמוקדשים לכל מה שקשור בגיבוי והורדה של תכנים שתרגמו קבוצות הפאנסאב השונות. אתרים כגון אנימה
@@ -274,7 +270,7 @@
               </li>
 
               <li><span>נטפליקס:</span>
-                <p>נטפליקס נכנסו לא מזמן לארצנו הקטנה והביאו איתם תכני אנימה מתורגמים לעברית. מכיוון שלא מדובר בפאנסאב
+                <p>נטפליקס נכנסו לארצנו הקטנה והביאו איתם תכני אנימה מתורגמים לעברית. מכיוון שלא מדובר בפאנסאב
                   אלא בתרגום רשמי הם מקבלים תווית משלהם.</p>
               </li>
 
@@ -320,12 +316,12 @@
                   </p>
                 </li>
                 <li>
-                  <p>בחלק מהמקרים תקלידו ותגלו שהמנוע מציע השלמה אוטומטית, אל תזלזלו בה. בנוסף תמצאו לפעמים בראש רשימת
+                  <p>בחלק מהמקרים תקלידו ותגלו שהמנוע מציע השלמה אוטומטית, או שתמצאו בראש רשימת
                     התוצאות תוצאה בולטת יותר מאחרות, ייתכן שזו תוצאה שנבחרה במיוחד כמומלצת עבורכם.</p>
                 </li>
                 <li>
                   <p>לאתר אחד יכולות להיות מספר תוויות שונות. האתר Anime SmartAss לדוגמה היה בלוג רגיל, אבל כשהבעלים
-                    החליט לתרגם את אוונגליון הוא הפך מיד גם לאתר פאנסאב.</p>
+                    החליט לתרגם את אוונגליון הוא הפך גם לאתר פאנסאב.</p>
                 </li>
                 <li>
                   <p>המנוע סורק גם אתרים וקבוצות שמתרגמים סדרות קוריאניות ולייב אקשן יפניים לעברית, מאחר ולפעמים מדובר
@@ -841,13 +837,15 @@
     }
 
     // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
+    function toggleNavigationMenu() {
       var x = document.getElementById("navDemo");
       if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
       } else {
         x.className = x.className.replace(" w3-show", "");
       }
+
+      closePhoneDropdownMore();
     }
 
     function setTextForEngineDidntLoad() {
@@ -896,6 +894,13 @@
       }
       else if (getComputedStyle(dropdownElement).display == "none") {
         document.getElementById("phone-dropdown-menue-more").style.display = "block";
+      }
+    }
+
+    function closePhoneDropdownMore() {
+      dropdownElement = document.getElementById("phone-dropdown-menue-more");
+      if (getComputedStyle(dropdownElement).display == "block") {
+        document.getElementById("phone-dropdown-menue-more").style.display = "none";
       }
     }
 
