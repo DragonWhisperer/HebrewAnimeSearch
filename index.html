@@ -173,7 +173,10 @@
               <li style="margin-bottom: 30px;"><span>2.</span>
                 <div class="instructions-top-p">
                   שימו לב שהכללים של גוגל לשיפור חיפושים באינטרנט חלים גם כאן. לדוגמא כדי לחפש ביטוי מדויק רשמו אותו
-                  בין גרשיים, וכדי לא לקבל תוצאות מאתר מסויים עליכם להוסיף בסוף החיפוש: 'site:domaintoexclude-'.
+                  בין גרשיים, וכדי לא לקבל תוצאות מאתר מסויים עליכם להוסיף בסוף החיפוש:
+                  <div class="inline-code-area">
+                    -site:domaintoexclude
+                  </div>
 
                   <div class="little-br"></div>
 
@@ -182,7 +185,7 @@
                   'מתורגם', חפשו:
 
                   <div class="inline-code-area">
-                    .sword art online -site:https://www.netflix.com -מתורגם
+                    sword art online -site:https://www.netflix.com -מתורגם
                   </div>
 
                   <div class="little-br"></div>
@@ -341,24 +344,24 @@
 
 
   <!-- Footer -->
-  <footer id="contact" class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge" style="overflow: hidden;">
+  <footer id="contact" class="w3-container w3-padding-64 w3-center footer-background w3-xlarge" style="overflow: hidden;">
    
     <a href="https://www.facebook.com/profile.php?id=100012357488080&sk=about&section=bio&lst=100012244067413%3A100012357488080%3A1559746624">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>    
+      <i class="fa fa-facebook-official w3-opacity w3-hover-opacity"></i>    
     </a>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium" style="line-height: 1.1;">
+    <i class="fa fa-instagram w3-opacity w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-opacity w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-opacity w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-opacity w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-opacity w3-hover-opacity"></i>
+    <p class="w3-medium w3-opacity" style="line-height: 1.1; padding-top: 0.2px;">
       נוצר על ידי אראגון
       <br>
       noaragono15@gmail.com
     </p>
 
     <!-- Drop Animation -->
-    <div style="height: 0; width: 100%; position: relative; z-index: -1;">
+    <div class="w3-opacity" style="height: 0; width: 100%; position: relative; z-index: -1;">
         <div id="contact-drop-animation" style="top: -91px;" class=""></div> <!-- class="drop-effect" -->
       </div>
   </footer>
@@ -455,9 +458,13 @@
       color: #1556ad;
       /* width: 200px;
       height: 200px; */
+      opacity: 0.8 !important;
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
-      opacity: 1 !important;
+    }
+
+    .footer-background {
+      background-color: rgb(241, 241, 241, 0.60) !important;
     }
 
     /* --------- */
@@ -572,14 +579,14 @@
       display: inline-block;
       text-align: left;
       padding: 0px 4px 0px 4px !important;
-      /* border-radius: 7px; */
-      /* background-color: rgba(216, 201, 201, 0.42); */
+      border-radius: 7px;
+      background-color: rgba(216, 201, 201, 0.42);
       direction: ltr;
-      font-style: italic;
-      margin-left: 2px;
-      margin-right: 2px;
-      font-size: inherit;
-      /* float: left; */
+      margin-left: 0.3px;
+      margin-right: 0.3px;
+      /* font-style: italic; */
+      /* font-size: inherit; */
+      font-size: 97%;
     }
 
     .instructions-top span {
